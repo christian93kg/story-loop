@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="340" viewBox="0 0 820 340">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6e6a63"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="340" rx="14" fill="#0d0c0b"/>
+
+  <text x="60" y="52" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="3" fill="#6e6a63">CAUSALITY, NOT CHRONOLOGY</text>
+  <text x="60" y="76" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#4a4742">every beat joins the last on &#8220;therefore&#8221; or &#8220;but&#8221; — never &#8220;and then&#8221;</text>
+
+  <!-- chain -->
+  <line x1="112" y1="170" x2="228" y2="170" stroke="#4a4742" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="272" y1="170" x2="388" y2="170" stroke="#4a4742" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="432" y1="170" x2="548" y2="170" stroke="#4a4742" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="592" y1="170" x2="700" y2="170" stroke="#4a4742" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="700" y1="170" x2="748" y2="170" stroke="#ffa657" stroke-width="2" stroke-dasharray="2 5"/>
+
+  <text x="150" y="152" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#ffa657">therefore</text>
+  <text x="310" y="152" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#ffa657">but</text>
+  <text x="490" y="152" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#ffa657">therefore</text>
+  <text x="650" y="152" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#ffa657">but</text>
+
+  <circle cx="90" cy="170" r="22" fill="#1a1815" stroke="#6e6a63" stroke-width="2"/>
+  <circle cx="250" cy="170" r="22" fill="#1a1815" stroke="#6e6a63" stroke-width="2"/>
+  <circle cx="410" cy="170" r="22" fill="#1a1815" stroke="#6e6a63" stroke-width="2"/>
+  <circle cx="570" cy="170" r="22" fill="#1a1815" stroke="#6e6a63" stroke-width="2"/>
+  <circle cx="700" cy="170" r="24" fill="none" stroke="#ffa657" stroke-width="2.5" stroke-dasharray="4 4"/>
+
+  <text x="90" y="175" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#a8a49c">1</text>
+  <text x="250" y="175" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#a8a49c">2</text>
+  <text x="410" y="175" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#a8a49c">3</text>
+  <text x="570" y="175" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#a8a49c">4</text>
+  <text x="700" y="176" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffa657">?</text>
+
+  <text x="700" y="222" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffa657">want at risk</text>
+  <text x="700" y="242" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#6e6a63">handed back mid-doubt —</text>
+  <text x="700" y="258" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#6e6a63">no menu, no resolution yet</text>
+
+  <line x1="60" y1="292" x2="760" y2="292" stroke="#2a2823" stroke-width="1"/>
+  <text x="60" y="316" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#4a4742">craft-gate.sh injects the doctrine before a beat is drafted — prose-lint.py checks it after</text>
+</svg>

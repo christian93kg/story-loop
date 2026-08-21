@@ -1,0 +1,9 @@
+Beat drafts land here before they reach a chapter log.
+
+The PostToolUse hook (.claude/hooks/prose-lint.py) fires on any file whose name
+ends in _draft.md and blocks the write on a Tier-A FAIL. Convention:
+
+    <story>/scratchpad/ch<N>_beat<M>_draft.md
+
+Drafts are gitignored — this file exists only so the directory ships with the
+template and arrives in every scaffolded story.

@@ -1,0 +1,23 @@
+# Obsidian app state — machine-specific, not part of the kit
+.obsidian/
+
+# Draft scratch space — see CLAUDE.md play hygiene. Beats are drafted here and
+# linted before they reach a chapter log; the drafts themselves are disposable.
+**/scratchpad/
+# ...but the template's copy must ship, so every scaffolded story gets the
+# directory for free. Git will not descend into an excluded directory, so the
+# directory itself has to be un-excluded before the file inside it can be.
+!_template/scratchpad/
+!_template/scratchpad/.gitkeep
+
+# Local permission overrides — personal, not shipped
+.claude/settings.local.json
+
+# Claude Code runtime lock files
+.claude/scheduled_tasks.lock
+
+.DS_Store
+
+# Python bytecode
+__pycache__/
+*.pyc
