@@ -1,3 +1,4 @@
+<!-- beat: type=scene obligation="Wren and Sable settle into the paired bench before Trial Night comes up" onstage=wren,sable -->
 "Nineteen minutes," you say. "And Structural Chem's in a building you found out about this morning. Eat something."
 
 Isla doesn't answer straight off. Then she takes one of the quarters and eats it, which isn't agreement so much as the nearest thing she'll hand over before nine.

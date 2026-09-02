@@ -19,6 +19,18 @@ order into `<story>/_reading_copy.md` via the `obsidian` CLI — a clean,
 front-to-back read of the finished text, kept separate from the working files.
 That is the whole requirement.
 
+Strip both machinery comment kinds before concatenating — the GM-only plan block
+and the per-beat type header are never part of the reading copy:
+
+```bash
+sed -e '/<!-- plan:start/,/plan:end -->/d' -e '/<!-- beat:/d' \
+    $(ls chapters/prologue.md chapters/chapter_*.md 2>/dev/null | sort -V)
+```
+
+`chapter_*.md` alone sorts lexicographically (`chapter_1, chapter_10, chapter_11, chapter_2,
+…`) and drops any `prologue.md` — `sort -V` (version sort) and the explicit prologue glob
+fix both.
+
 Chapter logs run ~20-24 KB each, so a finished story exceeds the ~30 KB
 single-call limit: `create overwrite` with the first chapter, then `append` the
 rest in order.

@@ -1,3 +1,4 @@
+<!-- beat: type=scene obligation="Wren and Sable settle into the paired bench before Trial Night comes up" onstage=wren,sable -->
 "Nineteen minutes," you say. "And you've a building to find."
 
 Isla eats one of the quarters, standing, and gets the folder into her bag one-handed.

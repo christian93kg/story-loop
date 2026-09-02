@@ -5,7 +5,20 @@
         "hooks": [
           {
             "type": "command",
+            "timeout": 15,
             "command": "sh \"$CLAUDE_PROJECT_DIR/.claude/hooks/craft-gate.sh\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "timeout": 10,
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/beat.py\" --guard"
           }
         ]
       }
@@ -16,8 +29,19 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/prose-lint.py\" --hook",
-            "timeout": 15
+            "timeout": 20,
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/beat.py\" --post"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "timeout": 15,
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/beat.py\" --meter"
           }
         ]
       }

@@ -60,6 +60,8 @@ last_updated: "{{DATE}}"
 
 > Living document — updated as the story progresses. Target length is set in `master_index.md` §6.
 
-| Chapter | Title | Arc | Status |
-| ------- | ----- | --- | ------ |
-|         |       |     |        |
+| Chapter | Title | Arc | Beats | Status |
+| ------- | ----- | --- | ----- | ------ |
+|         |       |     |       |        |
+
+> `Beats` is filled at chapter close with the actual count against budget — the honest record of scope drift.

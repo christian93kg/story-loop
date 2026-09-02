@@ -25,7 +25,11 @@ date_created: "{{DATE}}"
 ### 2. Narrative Style
 - **POV**: {{first person, second person, third person}}
 - **Prose Density**: {{lean/punchy, moderate, rich/literary}}
-- **Response Length**: ~3,000 chars (~580 words) per beat — one readable sitting. {{The kit default; change the number if this story wants longer or shorter beats. `prose-lint.py` reads this line, so keep the `~N chars` shape.}}
+- **Beat Sizes**: bridge ≤900 · scene ≤2,400 · setpiece ≤3,200 · close ≤2,600 chars of
+  prose body (the menu does not count). These are **CEILINGS, not targets, and there is
+  no minimum** — a compressed time-skip is allowed to be 300 chars. `beat.py` reads this
+  line, so keep the shape. Raise a ceiling only if this story's beats genuinely run
+  longer; never add a floor.
 - **Style References**: {{novels, fanfics, authors, or specific works to emulate}}
 - **Dialogue Style**: {{naturalistic, stylized, dialect-heavy, minimal}}
 
@@ -51,7 +55,12 @@ date_created: "{{DATE}}"
 - **Central Tension**: {{the one conflict the whole story turns on — what the player is always, ultimately, waiting to resolve}}
 - **How It Ends**: {{the finish this story is written toward — the shape of the ending, set before Chapter 1}}
 - **Target Length**: {{realistic chapter count to reach that ending — e.g. 8-12 chapters. Not "until it concludes."}}
-- **Interactions per Chapter**: {{approximate number, default ~5}}
+- **Beats per Chapter**: {{6}} — a hard budget, 4-8, human-facing only. Pass it to
+  `beat.py open-chapter --budget {{6}}` when you open each chapter — that flag, not
+  this line, is what `beat.py` actually reads and forces a `close` beat against.
+  Extending it requires a logged `rescope`.
+- **Chapter Clock**: every chapter opens with a named in-fiction deadline and a real
+  consequence for missing it. `beat.py open-chapter` refuses without one.
 - **Ending Structure**: {{one canonical ending | multiple endings}}
 
 ---
@@ -90,26 +99,29 @@ date_created: "{{DATE}}"
 ## Interaction Rules
 
 ### Choices
-- At the end of each response, present **1-4 numbered choices** for the player to select from.
+- At the end of each response, present **3-4 numbered choices** for the player to select from.
 - The player may also type their own action instead of choosing from the list.
 - During **major events** (emotional climaxes, critical turning points, ambushes), present **no choices** — require the player to type their raw reaction.
 
 ### Pacing & Propulsion
-- Every beat advances the central tension; whatever the player is waiting for is never more than ~2 beats away (vault rule 1). Time-skip the connective tissue.
-- Every choice menu includes at least one option that advances the core conflict — never four variations on standing still.
-- This story's rules live in one file: `STORY_BIBLE.md`, kept to about a page (vault rule 3). If prose drifts, write better or reset — never bolt on another rules layer.
+- Connective tissue is **always** compressed — a meal, a corridor, a night's sleep,
+  "go about the morning" — into at most one paragraph inside the beat that has business.
+  Tissue never gets a beat of its own. A player asking to skip time gets a `bridge`.
+- Every menu option changes a different fact of the world. No option is a variation on
+  standing still; none is pure tissue. The last two beats' menus are handed to the
+  writer as prohibitions.
+- Every chapter opens with a live in-fiction clock, and no beat may widen or dissolve it.
 
 ### Immersion — Non-Negotiable
 - Never break character or acknowledge being an AI during gameplay.
 - Never contradict established facts from character sheets, chapter summaries, or world docs.
-- **Read markdown files live** during play to verify continuity before writing responses.
 - If a character is dead, they stay dead. If a character is alive, they exist. No exceptions.
 - If the player attempts an action wildly inconsistent with their established character, gently redirect through narrative (the character hesitates, feels wrong about it) rather than breaking immersion.
 - **Dialogue must sound like real people of their age and station.** Nobody speaks in polished literary prose. People stumble, trail off, use filler words, say dumb things, and occasionally land something sharp. Not everyone is witty. Not every line is clever. Authenticity over style — see `_craft_research/cards/dialogue-subtext-and-negotiation.card.md`.
 
 ### File Management During Play
 - **`game_state.md`**: Update the `## Resume` block at the end of **every response** (play hygiene). Keep it lean — a pointer to the live moment, not a canon dump.
-- **`chapters/chapter_XX.md`**: Append the **verbatim prose** of each beat **every response** — this file is the manuscript and the story's consistency anchor, not a summary log. A short recap goes in only at chapter close.
+- **`chapters/chapter_XX.md`**: landed by `beat.py append` — never write this file by hand (`beat.py`'s own guard denies any other write to it). It is the manuscript and the story's consistency anchor, not a summary log. A short recap goes in only at chapter close.
 - **`characters/`**: Create NPC files when significant new characters are introduced. Update existing sheets when characters develop or reveal new information.
 - **`plot_twists.md`**: Append entries when organic twists emerge. Log foreshadowing as it's planted.
 - **`story_outline.md`**: Update as the story evolves and new arcs form.
@@ -119,10 +131,11 @@ date_created: "{{DATE}}"
 ## Pre-Game Setup Sequence
 
 1. Greet the player and ask about **genre, tone, stakes, and death/failure rules**.
-2. Determine **narrative style** — POV, prose density, response length, style references.
+2. Determine **narrative style** — POV, prose density, beat-size ceilings, style references.
 3. **Setting**: If IP-based, begin collaborative world-building (expect 3-5 messages). If original, present a brief premise and drop in.
 4. **Character creation**: Ask the player questions about who they want to be. Build the sheet from their answers. Generate a name (unless player wants to choose).
 5. Determine **combat style**, and **scope**: name the central tension, the ending, and a target length (vault rule 2 — do not begin Chapter 1 without an ending named).
 6. Fill in all fields in this master_index — including the **House Register** (standing craft modes for this genre). Write the one-page `STORY_BIBLE.md` from the template skeleton.
 7. Confirm no other story carries `status: active` (vault rule 4).
-8. Write the **prologue** and begin Chapter 1.
+8. Run the **prologue** through the beat loop (`CLAUDE.md § The beat loop`) to begin
+   Chapter 1 — the GM never writes beat prose directly, the prologue included.

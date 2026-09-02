@@ -31,14 +31,18 @@ The five rules (full text in `CLAUDE.md`): **1.** Propulsion over texture · **2
 
 ```
 _template/
-├── master_index.md      setup decisions — incl. central tension, ending, target length
+├── master_index.md      setup decisions — incl. central tension, ending, target length,
+│                          Beat Sizes ceilings, Beats per Chapter budget, Chapter Clock
 ├── STORY_BIBLE.md        the one-page north star (rule 3 — keep it to a page)
-├── game_state.md         live save state
+├── game_state.md         live save state (Position/Clock/Plan + four bullets)
 ├── story_outline.md      arc skeleton + the ending
 ├── plot_twists.md        twist & foreshadowing tracker
-├── _exemplars.md         up to five of this story's own best beats — part of the canon-read
+├── _exemplars.md         up to five of this story's own best beats — packed into every
+│                          narrator brief automatically
 ├── characters/           player_character.md + _npc_template.md
-├── chapters/             _chapter_template.md
-├── scratchpad/           beats are drafted and linted here before they reach a chapter log
+├── chapters/             _chapter_template.md — carries a GM-only plan block (the chapter's
+│                          turns and clock; never shown to the player) under the frontmatter
+├── scratchpad/           beats are drafted, linted and read here before beat.py append
+│                          lands them in a chapter log — the ledger also lives here
 └── world/                canon_notes / factions / setting_overview
 ```

@@ -9,17 +9,32 @@ status: "{{active|complete}}"
 last_updated: "{{DATE}}"
 ---
 
+<!-- plan:start  GM-ONLY. Never quoted, paraphrased, summarised or hinted at in chat.
+     Written and updated by `beat.py open-chapter` / `close` / `rescope` — do not hand-edit.
+chapter: {{N}}
+title: {{TITLE}}
+budget: {{6}}
+clock: {{a named in-fiction deadline with a real consequence for missing it}}
+turns:
+  T1 | {{the fact this turn changes}} | status: open | earliest: 1 | latest: 2
+  T2 | {{...}} | status: open | earliest: 2 | latest: 4
+close: land the last open turn, then time-skip out. Do not ask the player.
+forbidden:
+rescope:
+plan:end -->
+
 # Chapter {{XX}} — {{TITLE}}
 
-> **This file is the manuscript.** Store the **verbatim prose** of each beat here — the exact text shown
-> to the player — not a summary of it. The saved prose is the story's consistency anchor: re-read recent
-> beats before writing a new one to hold the voice steady. Append one block per response (play hygiene,
-> vault `CLAUDE.md`). Keep state/threads in `game_state.md`, canon in the bible/world/character files —
-> not here. A short recap goes at the bottom only when the chapter closes.
+> **This file is the manuscript.** It holds the **verbatim prose** of each beat — the exact text shown
+> to the player — not a summary of it, and it is the story's consistency anchor: the last beats land in
+> every narrator brief automatically. Landed by `beat.py append` only (play hygiene, vault `CLAUDE.md`) —
+> never write this file by hand. Keep state/threads in `game_state.md`, canon in the bible/world/character
+> files — not here. A short recap goes at the bottom only when the chapter closes.
 
 ---
 
 ### Beat {{N}} — {{short label}} ({{DATE}})
+<!-- beat: type={{bridge|scene|setpiece|close}} obligation="{{the fact that changed}}" onstage={{a,b}} -->
 
 **Player input:** {{the choice number the player picked, or their free-typed action, that opened this beat}}
 

@@ -21,3 +21,19 @@
 # Python bytecode
 __pycache__/
 *.pyc
+
+# The beat ledger — per-session chain of custody, not part of the kit. Already covered
+# by **/scratchpad/; listed explicitly so a relocated scratchpad still excludes it.
+**/.beat_ledger.json
+
+# The retired root-level scratch dir. Drafts, briefs, verdicts and the ledger all live
+# at <story>/scratchpad/, which is inside the story tree (so state survives /clear).
+/_scratch/
+
+# Shelved / finished stories
+/_archive/
+
+# Your story folders are NOT ignored — in your own repo your story is the point.
+# But never develop this kit inside a tree that also holds a private story you do not
+# intend to publish: `git add -A` would commit all of it. Develop in a clean clone and
+# copy the kit files into your vault.
