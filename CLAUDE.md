@@ -145,6 +145,11 @@ If you're playing from plain Markdown files with no Obsidian instance running, s
 that skill and just edit the files directly; nothing else in this kit depends on
 Obsidian being open.
 
+## Git commit attribution
+
+Never add a "Co-Authored-By: Claude" (or any Claude/Anthropic) trailer to commit
+messages, PR descriptions, or any git-related output. Commit as the repo owner only.
+
 ## Skills
 
 - **`new-story`** — scaffolding a story from `_template/` and opening the active slot
